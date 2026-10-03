@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Mi Tienda{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'tienda/css/style.css' %}">
+</head>
+
+<body>
+
+<header>
+    <div class="contenedor header">
+        <h1>Mi Tienda</h1>
+
+        <nav>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'productos' %}">Productos</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block contenido %}
+    {% endblock %}
+</main>
+
+<footer>
+    <p>© 2026 Mi Tienda</p>
+</footer>
+
+<script src="{% static 'tienda/js/main.js' %}"></script>
+
+</body>
+</html>

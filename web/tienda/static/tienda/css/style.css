@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* HEADER */
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #ddd;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+/* PRODUCTOS */
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    margin-bottom: 30px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-contenido {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+/* PRECIO */
+
+.precio {
+    color: #008000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+    border: none;
+    background: #007bff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #0056b3;
+}
+
+/* DETALLE */
+
+.detalle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.detalle img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.detalle h2 {
+    font-size: 35px;
+}
+
+.volver {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+}
+
+/* FOOTER */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* MÓVIL */
+
+@media (max-width: 800px) {
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detalle {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}

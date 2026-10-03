@@ -1,0 +1,48 @@
+{% extends 'tienda/base.html' %}
+
+{% block title %}Inicio - Mi Tienda{% endblock %}
+
+{% block contenido %}
+
+<section class="hero">
+    <div>
+        <h2>Bienvenido a Mi Tienda</h2>
+        <p>Encuentra productos sencillos y de calidad.</p>
+
+        <a class="boton" href="{% url 'productos' %}">
+            Ver productos
+        </a>
+    </div>
+</section>
+
+<section class="contenedor">
+    <h2>Productos destacados</h2>
+
+    <div class="productos">
+
+        {% for producto in productos %}
+
+        <article class="card">
+
+            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+
+            <div class="card-contenido">
+                <h3>{{ producto.nombre }}</h3>
+
+                <p class="precio">
+                    ${{ producto.precio }}
+                </p>
+
+                <a class="boton" href="{% url 'detalle' producto.id %}">
+                    Ver detalle
+                </a>
+            </div>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+</section>
+
+{% endblock %}
