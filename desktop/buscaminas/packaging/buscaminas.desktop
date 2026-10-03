@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Buscaminas
+Comment=Juego de Buscaminas
+Exec=/home/guedan/Documentos/CUBO/cubo_ai_python/desktop/buscaminas/.venv/bin/python /home/guedan/Documentos/CUBO/cubo_ai_python/desktop/buscaminas/main.py
+Icon=/home/guedan/Documentos/CUBO/cubo_ai_python/desktop/buscaminas/assets/icon.png
+Terminal=false
+Categories=Game;
+StartupNotify=true
+StartupWMClass=buscaminas
